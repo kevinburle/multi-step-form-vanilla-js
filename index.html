@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend Mentor | Multi-step form</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <!-- main section -->
+    <main>
+      <section class="wrapper step-form">
+        <!-- sidebar banner -->
+        <aside class="banner">
+          <ul class="steps">
+            <li>
+              <span class="dot selected">1</span>
+              <p class="step">step 1 <span class="details">your info</span></p>
+            </li>
+            <!-- step 2 -->
+            <li>
+              <span class="dot">2</span>
+              <p class="step">
+                step 2 <span class="details">select plan</span>
+              </p>
+            </li>
+            <!-- step 3 -->
+            <li>
+              <span class="dot">3</span>
+              <p class="step">step 3 <span class="details">add-ons</span></p>
+            </li>
+            <!-- step 4 -->
+            <li>
+              <span class="dot">4</span>
+              <p class="step">step 4 <span class="details">summary</span></p>
+            </li>
+          </ul>
+        </aside>
+
+        <!-- card wrapper step 1-->
+        <article class="card-wrapper" id="step-1">
+          <!-- card -->
+          <article class="card">
+            <div class="content">
+              <header>
+                <h1>Personal info</h1>
+                <p>
+                  Please provide your name, email, adress, and phone number.
+                </p>
+              </header>
+              <!-- form -->
+              <form class="form">
+                <!-- row 1 -->
+                <div class="form-row">
+                  <div class="input-header">
+                    <label for="name">name</label>
+                    <p>Wrong format or empty value</p>
+                  </div>
+                  <input
+                    id="name"
+                    type="text"
+                    name="name"
+                    placeholder="e.g. Stephen King"
+                  />
+                </div>
+                <!-- row 2 -->
+                <div class="form-row">
+                  <div class="input-header">
+                    <label for="email">email address</label>
+                    <p>Wrong format or empty value</p>
+                  </div>
+                  <input
+                    id="email"
+                    type="text"
+                    name="email"
+                    placeholder="e.g. stephenking@lorem.com"
+                  />
+                </div>
+                <!-- row 3 -->
+                <div class="form-row">
+                  <div class="input-header">
+                    <label for="phone">phone number</label>
+                    <p>Wrong format or empty value</p>
+                  </div>
+                  <input
+                    id="phone"
+                    type="text"
+                    name="phone"
+                    placeholder="e.g. +1 234 567 890"
+                  />
+                </div>
+              </form>
+            </div>
+          </article>
+          <!-- end of card -->
+
+          <!-- footer -->
+          <footer>
+            <div class="btn-container">
+              <button type="submit" class="btn next">next step</button>
+            </div>
+          </footer>
+          <!-- end of footer -->
+        </article>
+        <!-- end of card wrapper step 1-->
+
+        <!-- card wrapper step 2-->
+        <article class="card-wrapper hide" id="step-2">
+          <!-- card -->
+          <article class="card">
+            <div class="content">
+              <header>
+                <h1>Select your plan</h1>
+                <p>You have the option of monthly of yearly billing</p>
+              </header>
+              <!-- plan -->
+              <ul class="plans boxes"></ul>
+              <!-- switch box -->
+              <div class="switch-box">
+                <label class="switch">
+                  <input type="checkbox" />
+                  <span></span>
+                </label>
+                <p>monthly</p>
+                <p>yearly</p>
+              </div>
+            </div>
+          </article>
+          <!-- end of card -->
+
+          <!-- footer -->
+          <footer>
+            <div class="btn-container">
+              <button class="link-back prev">go back</button>
+              <button class="btn next">next step</button>
+            </div>
+          </footer>
+          <!-- end of footer -->
+        </article>
+        <!-- end of card wrapper step 2 -->
+
+        <!-- card wrapper step 3-->
+        <article class="card-wrapper hide" id="step-3">
+          <!-- card -->
+          <article class="card">
+            <div class="content">
+              <header>
+                <h1>Pick add-ons</h1>
+                <p>Add-ons help enhance your gaming experience.</p>
+              </header>
+
+              <!-- add ons -->
+              <ul class="add-ons boxes"></ul>
+            </div>
+          </article>
+          <!-- end of card -->
+
+          <!-- footer -->
+          <footer>
+            <div class="btn-container">
+              <button type="submit" class="link-back prev">go back</button>
+              <button type="submit" class="btn next">next step</button>
+            </div>
+          </footer>
+          <!-- end of footer -->
+        </article>
+        <!-- end of card wrapper step 3-->
+
+        <!-- card wrapper step 4-->
+        <article class="card-wrapper hide" id="step-4">
+          <!-- card -->
+          <article class="card">
+            <div class="content">
+              <header>
+                <h1>Finishing up</h1>
+                <p>Double-check everything looks OK before confirming.</p>
+              </header>
+
+              <!-- finishing -->
+              <ul class="finishing boxes">
+                <!-- finishing line 1 -->
+                <li class="boxe">
+                  <p class="offer">
+                    Arcade (Monthly)<a class="change">Change</a>
+                  </p>
+                  <span class="price">$9/mo</span>
+                </li>
+
+                <!-- insert options here with JS -->
+
+                <!-- last finishing line -->
+                <li class="boxe">
+                  <p class="offer">Total (per month)</p>
+                  <span class="price">$20/mo</span>
+                </li>
+              </ul>
+            </div>
+          </article>
+          <!-- end of card -->
+
+          <!-- footer -->
+          <footer>
+            <div class="btn-container">
+              <button type="submit" class="link-back prev">go back</button>
+              <button type="submit" class="btn next confirm">confirm</button>
+            </div>
+          </footer>
+          <!-- end of footer -->
+        </article>
+        <!-- end of card wrapper step 4-->
+
+        <!-- card wrapper step 5-->
+        <article class="thank-you card-wrapper hide" id="step-5">
+          <!-- card -->
+          <article class="card">
+            <div class="content">
+              <header>
+                <img src="./assets/images/icon-thank-you.svg" alt="thank you" />
+                <h1>Thank you!</h1>
+                <p>
+                  Thanks for confirming your subscription! We hope you have fun
+                  using our platform. If you ever need support, please feel free
+                  to email us at support@loremgaming.com.
+                </p>
+              </header>
+            </div>
+          </article>
+          <!-- end of card -->
+        </article>
+        <!-- end of card wrapper step 5-->
+      
+      </section>
+    </main>
+    <!-- end of main section -->
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
